@@ -1,3 +1,4 @@
+import { Counter } from './../models/counter';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CounterComponent } from './counter.component';
@@ -25,7 +26,7 @@ describe('CounterComponent', () => {
 
   it('should increase account when call increase', () => {
     // given
-    component.account = 0;
+    component.counter.account = 0;
 
     // when
     component.increase();
@@ -36,7 +37,7 @@ describe('CounterComponent', () => {
 
   it('should decrease account when call decrease', () => {
     // given
-    component.account = 0;
+    component.counter.account = 0;
 
     // when
     component.decrease();

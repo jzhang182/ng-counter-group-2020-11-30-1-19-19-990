@@ -1,3 +1,4 @@
+import { Counter } from './../models/counter';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,19 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.counter = new Counter();
+   }
 
-  public account: number = 0;
+  public get account(): number {
+    return this.counter.account;
+  }
+  public counter: Counter;
 
   ngOnInit(): void {
   }
 
   public increase(): void {
-    this.account++;
+    this.counter.account++;
   }
 
   public decrease(): void {
-    this.account--;
+    this.counter.account--;
   }
 
 }
