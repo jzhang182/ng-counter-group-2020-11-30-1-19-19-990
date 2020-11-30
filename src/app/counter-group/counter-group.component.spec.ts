@@ -24,14 +24,6 @@ describe('CounterGroupComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should set size when create instance', () => {
-    expect(component.size).toBe(5);
-  });
-
-  it('should contain counters when create instance', () => {
-    expect(component.counters.length).toBe(component.size);
-  });
-
   it('should return sum of all counters when call sum', () => {
     // given
     let expectedSum = 0;
@@ -46,10 +38,6 @@ describe('CounterGroupComponent', () => {
 
   it('should change count of counters when reset size', () => {
     // given
-    let expectedSum = 0;
-    component.counters.forEach(element => {
-      expectedSum += element.account;
-    });
     // when
     component.setSize('10');
     // then
