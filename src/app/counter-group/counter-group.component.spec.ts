@@ -22,4 +22,8 @@ describe('CounterGroupComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should set size when create instance', () => {
+    expect(component.size).toBe(5);
+  });
 });
