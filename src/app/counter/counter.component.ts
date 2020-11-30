@@ -22,11 +22,14 @@ export class CounterComponent implements OnInit {
   }
 
   public increase(): void {
-    this.counter.account++;
+    this.counter.increase();
   }
 
   public decrease(): void {
-    this.counter.account--;
+    this.counter.decrease();
   }
 
+  public resetCounter(): void {
+    this.counter.resetCounter();
+  }
 }

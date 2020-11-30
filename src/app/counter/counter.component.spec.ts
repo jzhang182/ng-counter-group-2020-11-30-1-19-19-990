@@ -46,4 +46,15 @@ describe('CounterComponent', () => {
     // then
     expect(component.account).toBe(-1);
   });
+
+  it('should reset account when call decrease', () => {
+    // given
+    component.counter.account = 9;
+
+    // when
+    component.resetCounter();
+
+    // then
+    expect(component.account).toBe(0);
+  });
 });
