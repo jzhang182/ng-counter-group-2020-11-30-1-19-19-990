@@ -17,6 +17,7 @@ describe('CounterComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CounterComponent);
     component = fixture.componentInstance;
+    component.counter = new Counter();
     fixture.detectChanges();
   });
 
