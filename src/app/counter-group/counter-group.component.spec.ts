@@ -43,4 +43,18 @@ describe('CounterGroupComponent', () => {
     // then
     expect(component.counters.length).toBe(10);
   });
+
+  it('should change all counter to 0 when call resetAll', () => {
+    // given
+    component.counters[0].account = 1;
+    component.counters[1].account = 2;
+    component.counters[2].account = 3;
+    // when
+    component.resetAll();
+    // then
+    expect(component.sum()).toBe(0);
+    expect(component.counters[0].account).toBe(0);
+    expect(component.counters[1].account).toBe(0);
+    expect(component.counters[2].account).toBe(0);
+  });
 });

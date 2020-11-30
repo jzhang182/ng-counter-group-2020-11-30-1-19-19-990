@@ -29,4 +29,8 @@ export class CounterGroupService {
     this.counters = new Array<Counter>();
     this.generateCounters();
   }
+
+  public resetAll(): void {
+    this.counters.map(counter => counter.account = 0);
+  }
 }
