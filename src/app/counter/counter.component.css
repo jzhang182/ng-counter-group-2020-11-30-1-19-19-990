@@ -1,0 +1,13 @@
+.container{
+  position:relative;
+  width:200px;
+}
+.numberContainer{
+  display: inline;
+  margin-left:20%;
+}
+.buttonGroup{
+  position:absolute;
+  top:0;
+  right:0;
+}

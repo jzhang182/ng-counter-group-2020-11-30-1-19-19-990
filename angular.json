@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -91,6 +92,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -124,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "ng-counter-group"
+  "defaultProject": "ng-counter-group",
+  "cli": {
+    "analytics": "de1db031-0f93-420c-b75b-09fec072ffe3"
+  }
 }
