@@ -1,5 +1,5 @@
 <!-- <p>counter-group works!</p> -->
-<input type="number" #size (keyup.enter)="setSize(size.value)">
+<input nz-input nzSize="small" style="width: 120px" type="number" #size (keyup.enter)="setSize(size.value)">
 <button nz-button nzType="primary" (click)="setSize(size.value)">setSize</button>
 <div  *ngFor="let counter of counters">
   <app-counter [counter]="counter"></app-counter>
