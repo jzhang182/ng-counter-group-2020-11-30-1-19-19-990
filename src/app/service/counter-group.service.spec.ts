@@ -29,4 +29,18 @@ describe('CounterGroupService', () => {
   it('should contain counters when create instance', () => {
     expect(service.counters.length).toBe(service.size);
   });
+
+  it('should change all counter to 0 when call resetAll', () => {
+    // given
+    service.counters[0].account = 1;
+    service.counters[1].account = 2;
+    service.counters[2].account = 3;
+    // when
+    service.resetAll();
+    // then
+    expect(service.sum()).toBe(0);
+    expect(service.counters[0].account).toBe(0);
+    expect(service.counters[1].account).toBe(0);
+    expect(service.counters[2].account).toBe(0);
+  });
 });
